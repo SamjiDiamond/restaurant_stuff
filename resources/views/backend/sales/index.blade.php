@@ -41,11 +41,11 @@ $currency =  setting_by_key("currency");
                                 <td>{{ $sale->comments }}</td>
 									@if($sale->status == 0)
 								<td>
-                                    <a href="javascript:void(0)" class="btn btn-danger btn-xs">Canceled</a>
+                                    <a href="javascript:void(0)" class="btn btn-danger btn-xs">Failed</a>
                                 </td>
 									@else
 								<td>
-                                    <a href="javascript:void(0)" class="btn btn-primary btn-xs ">Completed</a>
+                                    <a href="javascript:void(0)" class="btn btn-primary btn-xs ">Successful</a>
                                 </td>
 									@endif
 								
