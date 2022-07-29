@@ -9,5 +9,5 @@ return [
 	"order_detail"=>"Order Detail",
 	"pending"=>"Pending",
 	"order_store"=>"Order In Store",
-	"order_home"=>"Order in Home",
+	"order_home"=>"Order from Outside",
 ];

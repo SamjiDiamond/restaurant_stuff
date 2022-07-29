@@ -19,12 +19,15 @@ $currency =  setting_by_key("currency");
                         <tr>
                             <th>#</th>
                             <th>@lang('common.name')</th>
-                            <th>@lang('common.email')</th>
                             <th>@lang('common.phone')</th>
 							<th>@lang('common.amount')</th>
+							<th>VAT</th>
+							<th>Paid With</th>
+							<th>Address</th>
+							<th>Comment</th>
                             <th>@lang('common.status')</th>
 							
-                            <th></th>
+                            <th>Actions</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -33,14 +36,17 @@ $currency =  setting_by_key("currency");
                             <tr>
                                <td>{{ $key + 1 }}</td>
                                <td>{{ $sale->name }}</td>
-                               <td>{{ $sale->email }}</td>
                                <td>{{ $sale->phone }}</td>
                                <td>{{$currency}} {{ $sale->amount }}</td>
-									@if($sale->status == 1)  
+                               <td>{{$currency}} {{ $sale->vat }}</td>
+                                <td>{{ $sale->payment_with }}</td>
+                                <td>{{ $sale->address }}</td>
+                                <td>{{ $sale->comments }}</td>
+									@if($sale->status == 2)
 								<td>
                                     <a href="javascript:void(0)" class="btn btn-primary btn-xs ">@lang('online_orders.completed')</a>
                                 </td>
-									@elseif($sale->status == 2)  
+									@elseif($sale->status == 1)
 								<td>
                                     <a href="javascript:void(0)" class="btn btn-warning btn-xs">@lang('online_orders.pending')</a>
                                 </td>
@@ -51,8 +57,12 @@ $currency =  setting_by_key("currency");
 								@endif
 								
                                 <td>
-								
-                                    <a target="_blank" href="{{ url('sales/receipt/' . $sale->id) }}" class="btn btn-primary btn-xs pull-right">@lang('common.show')</a>
+                                    <a target="_blank" href="{{ url('sales/receipt/' . $sale->id) }}" class="btn btn-primary btn-xs">View Details</a>
+                                    @if($sale->status == 1)
+                                        <a href="{{ url('sales/cancel/' . $sale->id) }}" class="btn btn-danger btn-xs">Mark Canceled</a>
+                                        <a href="{{ url('sales/updatecompleted/' . $sale->id) }}" class="btn btn-success btn-xs">Mark Complete</a>
+                                    @endif
+
                                 </td>
                             </tr>
                         @empty

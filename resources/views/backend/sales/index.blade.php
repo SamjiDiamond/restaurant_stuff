@@ -20,8 +20,10 @@ $currency =  setting_by_key("currency");
                             <th>#</th>
                             <th>Customer</th>
                             <th>Sales Date</th>
-                            <th>Discount</th>
                             <th>Total Amount</th>
+                            <th>VAT</th>
+                            <th>Paid With</th>
+                            <th>Comment</th>
                             <th>Status</th>
                             <th></th>
                         </tr>
@@ -31,17 +33,19 @@ $currency =  setting_by_key("currency");
                         @forelse ($sales as $key => $sale)
                             <tr>
                                 <td>{{ $key + 1 }}</td>
-                                <td>{{ $sale->customer['name'] }}</td>
+                                <td>{{ $sale->customer['name']??"Walk-in customer" }}</td>
                                 <td>{{ $sale->created_at->format('d F Y') }}</td>
-								<td>{{$currency}} {{ $sale->discount }}</td>
                                 <td>{{$currency}} {{ ($sale->amount )}}</td>
-									@if($sale->status == 1)  
+                                <td>{{$currency}} {{ $sale->vat }}</td>
+                                <td>{{ $sale->payment_with }}</td>
+                                <td>{{ $sale->comments }}</td>
+									@if($sale->status == 0)
 								<td>
-                                    <a href="javascript:void(0)" class="btn btn-primary btn-xs ">Completed</a>
+                                    <a href="javascript:void(0)" class="btn btn-danger btn-xs">Canceled</a>
                                 </td>
 									@else
 								<td>
-                                    <a href="javascript:void(0)" class="btn btn-danger btn-xs">Canceled</a>
+                                    <a href="javascript:void(0)" class="btn btn-primary btn-xs ">Completed</a>
                                 </td>
 									@endif
 								

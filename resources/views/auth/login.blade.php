@@ -21,6 +21,17 @@
     <div class="middle-box text-center loginscreen animated fadeInDown">
         <div>
             <p>LOGIN</p>
+            @if($errors->all())
+                <div class="alert alert-warning">
+{{--                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>--}}
+                    <h4>Warning</h4>
+                    <li>
+                        @foreach ($errors->all() as $error)
+                            {{ $error }}
+                        @endforeach
+                    </li>
+                </div>
+            @endif
             <form class="m-t" role="form" method="POST" action="{{ url('/login') }}">
                 {{ csrf_field() }}
                 <div class="form-group">

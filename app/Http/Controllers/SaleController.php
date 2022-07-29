@@ -107,7 +107,14 @@ class SaleController extends Controller
     public function cancel($id)
     {
         Sale::where("id", $id)->update(array("status" => 0));
-        return redirect("sales");
+        return redirect("orders");
+    }
+
+
+    public function updatecompleted($id)
+    {
+        Sale::where("id", $id)->update(array("status" => 2));
+        return redirect("orders");
     }
 
 

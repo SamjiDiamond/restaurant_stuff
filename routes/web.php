@@ -62,7 +62,8 @@ Route::group(
         Route::post('sales/complete_sale', 'SaleController@completeSale');
         Route::get('sales/', 'SaleController@index');
         Route::get('sales/cancel/{id}', 'SaleController@cancel');
-		
+        Route::get('sales/updatecompleted/{id}', 'SaleController@updatecompleted');
+
         Route::get('sales/findcustomer', 'CustomerController@findcustomer');
         Route::post('sales/store_customer', 'CustomerController@storeCustomer');
 

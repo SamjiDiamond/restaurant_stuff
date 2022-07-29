@@ -31,7 +31,7 @@ class OrderController extends Controller
 
     public function orders() 
     {
-        $orders = Sale::select("*" , "sales.id as id")->where("type", "order")->leftJoin("sale_items as s" , "s.sale_id" , '=', "sales.id" )->orderBy("sales.id", "DESC")->paginate(25);
+        $orders = Sale::select("*" , "sales.id as id")->where("type", "order")->join("customers as c" , "c.id" , '=', "sales.customer_id" )->orderBy("sales.id", "DESC")->paginate(25);
         return view('backend.orders.allorders', ["orders" => $orders, "title" => "Orders"]);
     }
 
