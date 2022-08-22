@@ -34,7 +34,7 @@
                     <a href="#"><i class="fa fa-th-large"></i> <span class="nav-label">@lang('menu.sales')</span> <span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level collapse">
                         <li @if(Request::segment(1) == "sales" and Request::segment(2) == "") class="active" @endif><a href="{{ url('sales') }}">@lang('menu.pos_sales')</a></li>
-                         <li @if(Request::segment(1) == "orders" ) class="active" @endif><a href="{{ url('orders') }}">@lang('menu.order_sales')</a></li>
+{{--                         <li @if(Request::segment(1) == "orders" ) class="active" @endif><a href="{{ url('orders') }}">@lang('menu.order_sales')</a></li>--}}
                        
                     </ul>
                 </li>

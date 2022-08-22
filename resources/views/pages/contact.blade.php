@@ -46,7 +46,7 @@
             	<!-- Start: Contact Us Content-->
                 <div class="contact-middle-area">
 
-                    <p>Please enter correct information in input. you can test email functionality thanks.</p>
+                    <p>Please enter correct information below</p>
 
                 </div>
                 <!-- End: Contact Us Content-->

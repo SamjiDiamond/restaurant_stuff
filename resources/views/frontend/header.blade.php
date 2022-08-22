@@ -17,9 +17,10 @@
                         <ul class="menu-main">
                             <li><a href="{{url('/')}}">@lang('common.home')</a></li>
                             <li><a href="{{url('about')}}">About</a></li>
-                            <li>
-                                <a href="{{url('our-menu')}}">Menu</a>
-                            </li>
+                            <li><a href="{{url('about')}}">About</a></li>
+{{--                            <li>--}}
+{{--                                <a href="{{url('our-menu')}}">Menu</a>--}}
+{{--                            </li>--}}
                             <!--<li><a href="reservation.html">Reservations</a></li> -->
                             <!--<li><a href="event.html">Events</a></li> 
                             <li>
@@ -30,6 +31,7 @@
                                 </ul>
                           </li>-->
                             <li><a href="{{url('contact-us')}}">Contact</a></li>
+                            <li><a href="{{url('login')}}">Login</a></li>
                         </ul>
                     </nav>
                     <!-- End: main Navigation -->

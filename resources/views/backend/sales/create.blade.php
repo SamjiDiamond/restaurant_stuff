@@ -82,7 +82,7 @@
 										<td colspan=2>
 										<select id="OrderType" class="form-control"> 
 											<option value="pos">@lang('online_orders.order_store')</option>
-											<option value="order">@lang('online_orders.order_home')</option>
+{{--											<option value="order">@lang('online_orders.order_home')</option>--}}
 										</select>
 										</td>
 									</tr>

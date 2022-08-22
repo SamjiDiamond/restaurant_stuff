@@ -88,7 +88,7 @@
                         
                     </div>
                     
-                    <a href="{{url('our-menu')}}">View The Full menu</a>
+{{--                    <a href="{{url('our-menu')}}">View The Full menu</a>--}}
                     
                 </div>
             </div>

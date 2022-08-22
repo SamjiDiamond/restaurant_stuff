@@ -6,19 +6,19 @@
     	<div class="container">
             <div class="row">
                 <!-- Start: Speak-left -->
-                <div class="subscribe-left">
-                    <img src="assets/frontend/img/news-ltr-img.png" alt="">
-                </div>
+{{--                <div class="subscribe-left">--}}
+{{--                    <img src="assets/frontend/img/new-img.jpeg" class="img-rounded img" width="402px" height="123px" alt="">--}}
+{{--                </div>--}}
                 <!-- End: Speak-left -->
                 
                 <!-- Start: Speak-right -->
-                <div class="subscribe-right">
-                    <div class="subscribe-newsletr">
-                        <h4>Subscribe Our Newsletter</h4>
-                        <input type="text" id="email_newsletter" placeholder="Enter Your Email">
-                        <button type="button" class="subscribeNewsletter">Subscribe</button>
-                    </div>
-                </div>
+{{--                <div class="subscribe-right">--}}
+{{--                    <div class="subscribe-newsletr">--}}
+{{--                        <h4>Subscribe Our Newsletter</h4>--}}
+{{--                        <input type="text" id="email_newsletter" placeholder="Enter Your Email">--}}
+{{--                        <button type="button" class="subscribeNewsletter">Subscribe</button>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
                 <!-- End: Speak-right -->
             </div>
         </div>
@@ -97,12 +97,12 @@
                 	<ul>
                     	<li><a href="{{ setting_by_key('facebook') }}" target="_blank"><i class="fa fa-facebook"></i></a></li>
                     	<li><a href="{{ setting_by_key('twitter') }}" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                    	<!-- <li><a href="#" target="_blank"><i class="fa fa-google-plus"></i></a></li>
-                    	<li><a href="#" target="_blank"><i class="fa fa-linkedin"></i></a></li> -->
+                    	<li><a href="#" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+                    	<li><a href="#" target="_blank"><i class="fa fa-linkedin"></i></a></li>
                     </ul>
                 </div>
                 <!-- End: Footer Social Icons Section -->
-                <p>&copy; {{ setting_by_key('title') }} •  {{date('Y')}}  <a href="#"> Bit Solution</a></p>
+                <p>&copy; {{ setting_by_key('title') }} •  {{date('Y')}}</p>
             </div>
         </div>
     </footer>
